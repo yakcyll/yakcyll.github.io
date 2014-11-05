@@ -1,0 +1,102 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link href="main.css" rel="stylesheet" type="text/css">
+<style type="text/css" media="screen">
+body 
+{
+	margin: 0px;
+	color: 0;
+}
+#horizon        
+{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	overflow: visible;
+	visibility: visible;
+	display: block;
+}
+
+#content1, #content2, #content3
+{
+	font-family: 'Source Code Pro', sans-serif;
+	margin-left: -125px;
+	position: absolute;
+	top: -15px;
+	left: 50%;
+	width: 250px;
+	height: 50px;
+	visibility: visible;
+}
+</style>
+
+<script type="text/javascript">
+
+function main() {
+
+anim();
+setInterval(anim, 13500);
+
+}
+
+
+function anim() {
+norm();
+document.getElementById("content3").innerHTML="";
+setTimeout(normblink,2000);
+setTimeout(norm, 2100);
+setTimeout(normblink, 5100);
+setTimeout(norm, 5200);
+setTimeout(normblink, 5250);
+setTimeout(norm, 5350);
+setTimeout(fun, 7000);
+setTimeout(function(){flash(); var flashing=setInterval(flash,1000); setTimeout(function(){clearInterval(flashing)}, 4000)}, 8000);
+setTimeout(funblink, 9500);
+setTimeout(fun, 9600);
+setTimeout(funblink, 9650);
+setTimeout(fun, 9750);
+setTimeout(function(){document.getElementById("content3").innerHTML="wszystkiego najlepszego!"}, 8000);
+}
+
+function norm() {
+document.getElementById("content1").innerHTML="";
+document.getElementById("content2").innerHTML="._.";
+}
+
+function normblink() {
+document.getElementById("content2").innerHTML="-_-";
+}
+
+function fun() {
+document.getElementById("content2").innerHTML="^.^";
+}
+
+function funblink() {
+document.getElementById("content2").innerHTML="-.-";
+}
+
+function flash() {
+setTimeout(function(){document.getElementById("content1").innerHTML="\\ | /"},500);
+setTimeout(function(){document.getElementById("content1").innerHTML=""},1000);
+}
+
+</script>
+
+</head>
+
+<body onload="main()">
+
+<div id="horizon">
+	<div id="content1" style="top: -40px"></div>
+
+	<div id="content2">._.</div>
+
+	<div id="content3" style="margin-left:50px"></div>
+</div>
+
+
+</body></html>
